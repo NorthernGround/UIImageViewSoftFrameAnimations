@@ -194,7 +194,7 @@
     
     
     NSTimeInterval interval = [[NSDate date] timeIntervalSinceDate:start];
-    [self performSelector:@selector(loopImages) withObject:nil afterDelay:MAX(self.fps - interval, 0)];
+    [self performSelector:@selector(loopImages) withObject:nil afterDelay:MAX(self.fps - interval, 0) inModes:[NSArray arrayWithObject:NSRunLoopCommonModes]];
     
     self.position ++;
 }
